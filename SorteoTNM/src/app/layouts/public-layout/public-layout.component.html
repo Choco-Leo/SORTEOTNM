@@ -1,0 +1,17 @@
+<div class="public-layout-container">
+    <div class="public-layout-header">
+        <app-header-public></app-header-public>
+    </div>
+    
+    <div class="public-layout-content">
+        <router-outlet></router-outlet>
+    </div>
+
+    <div class="public-layout-footer">
+        <app-footer></app-footer>
+    </div>
+    
+    <button class="scroll-to-top" [class.show]="showScrollButton" (click)="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</div>

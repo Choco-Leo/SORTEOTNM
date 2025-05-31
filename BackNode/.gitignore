@@ -1,0 +1,3 @@
+# Archivos de entorno o secretos
+.env
+.env.local

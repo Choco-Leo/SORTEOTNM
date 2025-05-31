@@ -1,0 +1,250 @@
+
+.titulo-grupos {
+  text-align: center;
+  background: linear-gradient(to right, var(--color-primario), var(--color-cafe-oscuro));
+  color: var(--color-blanco-roto);
+  padding: 1rem;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+.dropdown-container {
+  display: flex;
+  flex-direction: row;  /* Cambiado a row para alinear horizontalmente */
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1200px;  /* Aumentado para acomodar los elementos en fila */
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;  /* Para que cada grupo ocupe el mismo espacio */
+}
+
+label {
+  font-weight: 500;
+  color: var(--color-blanco-roto);
+  background-color: var(--color-cafe-oscuro);
+  padding: 0.5rem;
+  border-radius: 4px 4px 0 0;
+  text-align: center;
+}
+
+.form-select {
+  padding: 0.75rem;
+  border: 1px solid var(--color-secundario);
+  border-radius: 0 0 4px 4px;  /* Redondeado solo en la parte inferior */
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 2px rgba(107, 68, 35, 0.2);
+}
+
+.form-select option {
+  padding: 0.5rem;
+}
+
+.grupos-container {
+  padding: 2rem;
+}
+
+.deporte-section {
+  margin-bottom: 2rem;
+}
+
+.deporte-header {
+  background-color: var(--color-cafe-oscuro);
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.grupo-card {
+  border: 1px solid var(--color-secundario);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.grupo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.grupo-header {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.instituciones-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--color-beige-claro);
+  border-top: 1px solid var(--color-secundario);
+  border-radius: 6px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+  background-image: 
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.08) 2px, transparent 2px, transparent 6px),
+      repeating-linear-gradient(-45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 6px);
+}
+
+.institucion-item {
+  flex: 1 1 40%;
+  min-width: 180px;
+  max-width: 48%;
+  background-color: var(--color-secundario);
+  color: var(--color-texto-oscuro);
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.25), rgba(255,255,255,0));
+  transition: transform 0.2s ease;
+  user-select: none;
+  cursor: default;
+}
+
+.institucion-item:hover {
+  transform: scale(1.03);
+}
+
+.vs {
+  font-weight: bold;
+  color: var(--color-primario);
+  background-color: var(--color-blanco-roto);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  background-image: radial-gradient(circle at center, #fff 20%, transparent 80%);
+  border: 1px solid var(--color-secundario);
+}
+
+.institucion-item:last-child {
+  border: 1px solid #eee;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btn-secondary {
+  background-color: var(--color-secundario);
+  color: var(--color-texto-oscuro);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-cafe-oscuro);
+  color: var(--color-blanco-roto);
+  transform: translateY(-2px);
+}
+
+.btn-secondary i {
+  font-size: 1.1rem;
+}
+
+.por-asignar {
+  background-color: #1a1a1a;    /* Fondo negro oscuro */
+  color: #ffffff;               /* Texto blanco */
+  border: 1px solid #333333;    /* Borde gris oscuro */
+  opacity: 0.8;                 /* Ligera transparencia para distinguirlo */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);  /* Sombra sutil */
+}
+
+.institucion-item.por-asignar:hover {
+  background-color: #2a2a2a;    /* Un poco más claro al hover */
+  transform: scale(1.03);
+}
+.contSpecial {
+  background-color: var(--color-blanco-roto);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0;     /* Quitamos el padding general */
+  overflow: hidden; /* Para mantener los bordes redondeados */
+}
+
+.container-Title {
+  background: linear-gradient(to right, var(--color-primario), var(--color-cafe-oscuro));
+  padding: 1.5rem;  /* Aumentamos el padding */
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-title {
+  color: var(--color-blanco-roto);
+  text-align: center;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.grupos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Solo dos columnas por fila */
+  gap: 1rem;
+}
+
+@media (max-width: 1050px) {
+  .grupos-grid {
+    grid-template-columns: 1fr; /* Una columna por fila en móvil/tablet */
+    gap: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+  .grupos-grid {
+    gap: 0.6rem;
+  }
+  .grupo-card {
+    font-size: 0.95rem;
+    border-radius: 2px;
+  }
+  .grupo-card {
+    font-size: 0.95rem;
+    border-radius: 2px;
+  }
+  .deporte-header {
+    font-size: 0.98rem;
+    padding: 0.8rem;
+    border-radius: 3px;
+  }
+  .instituciones-list {
+    padding: 0.7rem 0.3rem;
+    gap: 0.3rem;
+  }
+  .grupos-container {
+    padding: 1rem 0.2rem;
+  }
+}

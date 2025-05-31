@@ -1,0 +1,86 @@
+<!-- PAGINA WEB DESARROLLADA POR HECTOR LEONARDO MARTINEZ RIOS -->
+ <div class="contSpecial">
+    <div class="container-Title"><h3 class="filter-title">Filtros de Busqueda</h3></div>
+<form class="dropdown-container">
+    <!-- Primer Dropdown -->
+    <div class="form-group">
+        <label for="instituto">Instituto Tecnológico</label>
+        <select id="instituto" class="form-select" required [(ngModel)]="it_Part" name="it_Part" (change)="onFilterChange()">
+            <option value="" disabled selected>Seleccione un Instituto</option>
+            <option value="IT de Aguascalientes">IT de Aguascalientes</option>
+            <option value="IT de Altamira">IT de Altamira</option>
+            <option value="IT de Celaya">IT de Celaya</option>
+            <option value="IT de Ciudad Madero">IT de Ciudad Madero</option>
+            <option value="IT de Ciudad Valles">IT de Ciudad Valles</option>
+            <option value="IT de Ciudad Victoria">IT de Ciudad Victoria</option>
+            <option value="IT de Linares">IT de Linares</option>
+            <option value="IT de Matamoros">IT de Matamoros</option>
+            <option value="IT de Morelia">IT de Morelia</option>
+            <option value="IT de Reynosa">IT de Reynosa</option>
+            <option value="IT de Tijuana">IT de Tijuana</option>
+            <option value="ITS de Ébano">ITS de Ébano</option>
+            <option value="ITS de Jerez">ITS de Jerez</option>
+            <option value="ITS de Mante">ITS de Mante</option>
+            <option value="ITS de Pánuco">ITS de Pánuco</option>
+            <option value="ITS de Rioverde">ITS de Rioverde</option>
+            <option value="ITS de Tamazunchale">ITS de Tamazunchale</option>
+        </select>
+    </div>
+
+    <!-- Segundo Dropdown -->
+    <div class="form-group">
+        <label for="deporte">Deporte</label>
+        <select id="deporte" class="form-select" required [(ngModel)]="deport_select" name="deport_select" (change)="onFilterChange()">
+            <option value="" disabled selected>Seleccione un Deporte</option>
+            <option value="Básquetbol Varonil">Básquetbol Varonil</option>
+            <option value="Básquetbol Femenil">Básquetbol Femenil</option>
+            <option value="Fútbol Varonil">Fútbol Varonil</option>
+            <option value="Fútbol Femenil">Fútbol Femenil</option>
+            <option value="Vóleibol Varonil">Vóleibol Varonil</option>
+            <option value="Vóleibol Femenil">Vóleibol Femenil</option>
+            <option value="Béisbol Varonil">Béisbol Varonil</option>
+            <option value="Sóftbol Varonil">Sóftbol Varonil</option>
+            
+        </select>
+    </div>
+
+    <!-- Tercer Dropdown -->
+    <div class="form-group">
+        <label for="categoria">Grupo</label>
+        <select id="categoria" class="form-select" required [(ngModel)]="grupo_Select" name="grupo_Select" (change)="onFilterChange()">
+            <option value="" disabled selected>Seleccione un Grupo</option>
+            <option *ngFor="let grupo of grupos" [value]="grupo">{{grupo}}</option>
+        </select>
+    </div>
+</form>
+<div class="button-container">
+    <button type="button" class="btn btn-secondary" (click)="limpiarFiltros()">
+        <i class="fas fa-eraser"></i> Limpiar Filtros
+    </button>
+</div>
+</div>
+<div class="contSpecial">
+    <div class="container-Title"><h3 class="filter-title">Grupos Definidos</h3></div>
+
+<div class="grupos-container">
+    <div *ngFor="let deporte of Object.keys(filteredData)" class="deporte-section">
+        <div class="deporte-header">
+            <i class="fas fa-futbol"></i> {{deporte}}
+        </div>
+        <div class="grupos-grid">
+            <div *ngFor="let grupo of Object.keys(filteredData[deporte])" class="grupo-card">
+                <div class="grupo-header">
+                  {{grupo}}
+                </div>
+                <div class="instituciones-list">
+                    <div *ngFor="let institucion of filteredData[deporte][grupo]" class="institucion-item" [ngClass]="{'por-asignar': !institucion}">
+                        {{ institucion || 'Por asignar' }}
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- PAGINA WEB DESARROLLADA POR HECTOR LEONARDO MARTINEZ RIOS -->
+

@@ -1,0 +1,64 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 900; 
+  background-color: var(--color-primario);
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.tecnm-logo {
+    width: 200px;
+    height: auto;
+    max-width: 80%;
+    object-fit: contain;
+}
+
+@media (min-width: 768px) {
+    .tecnm-logo {
+        width: 250px;  /* Más grande en tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .tecnm-logo {
+        width: 300px;  /* Más grande en desktop */
+    }
+}
+
+.event-info {
+  color: var(--color-texto-claro);
+}
+
+.event-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  color: var(--color-texto-claro);
+  text-shadow: 1px 1px rgba(0,0,0,0.2);
+}
+
+.institution {
+  font-size: 1.05rem;
+  color: var(--color-beige-claro);
+  font-weight: 500;
+}
+
+.event-date {
+  font-size: 1rem;
+  color: var(--color-secundario);
+  font-style: italic;
+}

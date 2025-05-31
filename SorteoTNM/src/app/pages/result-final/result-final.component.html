@@ -1,0 +1,22 @@
+<div class="contSpecial">
+    <div class="container-Title"><h3 class="filter-title">Grupos Establecidos</h3></div>
+<div class="grupos-container">
+    <div *ngFor="let deporte of Object.keys(gruposData)" class="deporte-section">
+        <div class="deporte-header">
+            <i class="fas fa-futbol"></i> {{deporte}}
+        </div>
+        <div class="grupos-grid">
+            <div *ngFor="let grupo of Object.keys(gruposData[deporte])" class="grupo-card">
+                <div class="grupo-header">
+                  {{grupo}}
+                </div>
+                <div class="instituciones-list">
+                    <div *ngFor="let institucion of gruposData[deporte][grupo]" class="institucion-item" [ngClass]="{'por-asignar': !institucion}">
+                        {{ institucion || 'Por asignar' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

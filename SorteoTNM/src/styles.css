@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    /* Paleta de colores */
+    --color-primario: #6B4423;      /* Café Tabaco (Primario) */
+    --color-secundario: #E1C9A1;    /* Beige (Secundario) */
+    --color-beige-claro: #F5EBDC;   /* Beige Claro */
+    --color-cafe-oscuro: #5A381D;   /* Café Oscuro */
+    --color-blanco-roto: #F8F9FA;   /* Blanco Roto */
+    --color-texto-oscuro: #343A40;  /* Texto Oscuro */
+    --color-texto-claro: #FFFFFF;   /* Texto Claro */
+}
+body {
+    background-color: var(--color-beige-claro);
+    color: var(--color-texto-oscuro);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    line-height: 1.6;
+  }

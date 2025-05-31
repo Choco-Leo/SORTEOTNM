@@ -1,0 +1,22 @@
+<div class="login-container">
+    <div class="login-form">
+      <h3 class="titulo-sorteo">Sorteo Tecnologico</h3>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="userNick">Usuario</label>
+          <input type="text" id="userNick" formControlName="userNick" placeholder="Ingrese su usuario">
+          <div *ngIf="loginForm.get('userNick')?.invalid && loginForm.get('userNick')?.touched" class="error-message">
+            El usuario es requerido
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="passWD">Contraseña</label>
+          <input type="password" id="passWD" formControlName="passWD" placeholder="Ingrese su contraseña">
+          <div *ngIf="loginForm.get('passWD')?.invalid && loginForm.get('passWD')?.touched" class="error-message">
+            La contraseña es requerida
+          </div>
+        </div>
+        <button class="login-button" type="submit" [disabled]="!loginForm.valid">Iniciar Sesión</button>
+      </form>
+    </div>
+</div>
