@@ -69,9 +69,9 @@ cd SorteoTNM
 ```
 npm install
 ```
-3. Iniciar el servidor de desarrollo:
+3. Iniciar el servidor en modo desarrollo:
 ```
-npm start
+ng serve
 ```
 4. Acceder a la aplicación en el navegador: http://localhost:4200
 ## Estructura del Proyecto
